@@ -45,7 +45,7 @@ void VerifyVersion(int protobufVersionCompiledWith, const char* filename) {
   // If the user's program is linked against a different version of Protobuf,
   // GOOGLE_PROTOBUF_VERSION will have a different value.
   if (GOOGLE_PROTOBUF_VERSION != protobufVersionCompiledWith) {
-    ABSL_LOG(FATAL)
+    ABSL_LOG(WARNING)
         << "This program was compiled with Protobuf C++ version "
         << VersionString(protobufVersionCompiledWith)
         << ", but the linked version is "
